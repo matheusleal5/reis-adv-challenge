@@ -11,7 +11,14 @@ app.get("/:cpf", (request, response) => {
 
   const isCpf = validate(cpf);
 
-  return response.status(201).json({ message: `O CPF ${cpf} é: ${isCpf ? "Verdadeiro" : "Falso"}` });
+  return response.status(201).json({ message: `O CPF: ${cpf} é ${isCpf ? "VERDADEIRO" : "FALSO"}` });
 });
+
+app.use((err, request, response, next) => {
+    if (err instanceof Error) {
+      return response.status(500).json({ message: err.message });
+    }
+  }
+);
 
 app.listen(3333, () => console.log("Server is running on port 3333"));
