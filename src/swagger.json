@@ -1,0 +1,54 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "CPF Validation",
+    "description": "Challenge for Reis Advogados",
+    "version": "1.0.0",
+    "contact": {
+      "email": "matheusspleal@hotmail.com"
+    }
+  },
+  "paths": {
+    "/{cpf}": {
+      "get": {
+        "tags": ["CPF Validation"],
+        "summary": "CPF Validation",
+        "description": "Checks if the cpf number is valid",
+        "parameters": [
+          {
+            "name": "cpf",
+            "in": "path",
+            "description": "cpf",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "CPF Validation is successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "item": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error!"
+          }
+        }
+      }
+    }
+  }
+}
