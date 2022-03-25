@@ -1,0 +1,17 @@
+{
+  "name": "reis-adv-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:matheusleal5/reis-adv-challenge.git",
+  "author": "Matheus Leal <matheusspleal@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
