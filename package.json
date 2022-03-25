@@ -6,10 +6,12 @@
   "author": "Matheus Leal <matheusspleal@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "test": "jest"
   },
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "jest": "^27.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
